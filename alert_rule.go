@@ -72,6 +72,7 @@ type AlertRule struct {
 	Filters     []AlertFilters       `json:"filters,omitempty"`
 	Actions     []AlertRuleAction    `json:"actions,omitempty"`
 	Owner       string               `json:"owner,omitempty"`
+	Status      string               `json:"status,omitempty"`
 }
 
 func (c *Client) GetAlertRules(o Organization, p Project) ([]AlertRule, *Link, error) {
